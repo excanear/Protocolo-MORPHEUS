@@ -1,0 +1,32 @@
+# ══════════════════════════════════════════════════════════════════════════════
+#                           PROTOCOLO MORPHEUS
+#                              Dependências
+# ══════════════════════════════════════════════════════════════════════════════
+
+# Core - Requisições HTTP assíncronas
+aiohttp>=3.9.0
+asyncio>=3.4.3
+
+# Cores e formatação de terminal
+colorama>=0.4.6
+
+# DNS e WHOIS
+dnspython>=2.4.0
+python-whois>=0.8.0
+
+# Parsing e análise de telefone
+phonenumbers>=8.13.0
+
+# Utilidades
+python-dateutil>=2.8.2
+tqdm>=4.66.0
+
+# Opcional - APIs externas (instale se for usar)
+# shodan>=1.29.0
+# hunter-io>=1.0.0
+
+# Desenvolvimento (opcional)
+# pytest>=7.4.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# flake8>=6.0.0

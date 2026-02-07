@@ -1,0 +1,72 @@
+[project]
+name = "morpheus-protocol"
+version = "1.0.0"
+description = "Framework de Inteligência de Fontes Abertas (OSINT)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Morpheus Protocol"}
+]
+keywords = ["osint", "security", "reconnaissance", "intelligence"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Internet",
+]
+
+dependencies = [
+    "aiohttp>=3.9.0",
+    "colorama>=0.4.6",
+    "dnspython>=2.4.0",
+    "python-whois>=0.8.0",
+    "phonenumbers>=8.13.0",
+    "python-dateutil>=2.8.2",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+apis = [
+    "shodan>=1.29.0",
+]
+
+[project.scripts]
+morpheus = "morpheus:main"
+
+[project.urls]
+Homepage = "https://github.com/morpheus-protocol/morpheus"
+Documentation = "https://github.com/morpheus-protocol/morpheus#readme"
+Repository = "https://github.com/morpheus-protocol/morpheus"
+Issues = "https://github.com/morpheus-protocol/morpheus/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["morpheus*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
