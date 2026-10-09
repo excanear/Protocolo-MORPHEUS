@@ -5,7 +5,6 @@
 
 # Core - Requisições HTTP assíncronas
 aiohttp>=3.9.0
-asyncio>=3.4.3
 
 # Cores e formatação de terminal
 colorama>=0.4.6
